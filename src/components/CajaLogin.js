@@ -20,7 +20,7 @@ export default (props) => {
     try {
       //con await hacemos esperamos a que se cumpla la linea de codigo
       await userLoginAuth(auth,email,password);
-      alert("Usuario registrado con éxito")
+      
       
     } catch (error) {
       console.log(error)      
@@ -30,7 +30,7 @@ export default (props) => {
   
   return (
 <div class="login">
-	<h1>Registrar</h1>
+	<h1>Login</h1>
   
   <img src={logo} className="App-logo" alt="logo" />
     
