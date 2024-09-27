@@ -1,0 +1,24 @@
+{
+  "clases": [
+    {
+      "id_clase": 1,
+      "nombre_clase": "Yoga",
+      "cupo_clase": 20,
+      "descripcion": "Clase de relajación y estiramiento",
+      "Fecha": "27 de septiembre",
+      "hora_inicio": "08:00 am",
+      "hora_fin": "20:00 pm",
+      "id": "3b19"
+    },
+    {
+      "id_clase": 2,
+      "nombre_clase": "Crossfit",
+      "cupo_clase": 15,
+      "descripcion": "Entrenamiento de alta intensidad",
+      "Fecha": "28 de septiembre",
+      "hora_inicio": "08:00 am",
+      "hora_fin": "20:00 pm",
+      "id": "c91a"
+    }
+  ]
+}
