@@ -2,7 +2,8 @@
 import './App.css';
 //import { PrimerComponente } from './components/PrimerComponente';
 //import { SegundoComponente } from './components/SegundoComponente';
-import { CajaLogin } from './components/CajaLogin';
+import CajaLogin from './components/CajaLogin';
+import CajaRegistro from './components/CajaRegistro';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
 
         <CajaLogin/>
 
-
+        <CajaRegistro/>
       
 
     </div>

@@ -1,17 +1,43 @@
 import "./CajaLogin.css"
 import React, {useState}from 'react'
 import logo from '../logo.svg';
-export const CajaLogin = () => {
+import {auth} from "./firebase"
+import userLoginAuth from "../Auth/AuthUserMiddleware"
+
+
+
+export default (props) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  //para usar firebase en cada modulo lo llamamos
+
+
+
+  const submit = async(e) =>{
+
+    e.preventDefault();
+    try {
+      //con await hacemos esperamos a que se cumpla la linea de codigo
+      await userLoginAuth(auth,email,password);
+      alert("Usuario registrado con éxito")
+      
+    } catch (error) {
+      console.log(error)      
+      console.log("Error al conectarse con la pagina")
+    }
+  } 
+  
   return (
 <div class="login">
-	<h1>Login</h1>
+	<h1>Registrar</h1>
   
   <img src={logo} className="App-logo" alt="logo" />
-    <form method="post">
-    	<input type="text" name="u" placeholder="Usuario" required="required" />
-        <input type="password" name="p" placeholder="Contraseña" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Iniciar Sesión</button>
-    </form>
+    
+    	<input type="email" name="u" placeholder="Correo" required="required" onChange={(ev) => setEmail(ev.target.value)} />
+        <input type="password" name="p" placeholder="Contraseña" required="required" onChange={(ev) => setPassword(ev.target.value)} />
+        <button onClick={submit} class="btn btn-primary btn-block btn-large">Registrar</button>
+    
 </div>
   )
 }
