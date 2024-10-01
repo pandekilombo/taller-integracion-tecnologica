@@ -1,0 +1,105 @@
+/* src/AlumnoForm.css */
+
+/* Caja del formulario */
+.form-container {
+  max-width: 600px; /* Ancho máximo de la caja del formulario */
+  margin: 30px auto; /* Centrar la caja horizontalmente y agregar margen superior/inferior */
+  padding: 20px; /* Espacio interior de la caja */
+  border: 5px solid #007bff; /* Borde azul alrededor del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco para la caja del formulario */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para elevar la caja visualmente */
+}
+
+h2 {
+  text-align: center; /* Centrar el título del formulario */
+  color: #007bff; /* Color azul para el título */
+}
+
+/* Estilo del formulario y de los grupos de campos */
+form {
+  display: flex;
+  flex-direction: column; /* Los campos se muestran en columna */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Separación entre los grupos de campos */
+  display: flex;
+  flex-direction: column; /* Alineación en columna de las etiquetas y campos */
+}
+
+label {
+  margin-bottom: 5px; /* Separación entre el texto de la etiqueta y el campo de entrada */
+  font-weight: bold; /* Hacer que el texto de la etiqueta sea más grueso */
+  color: #333; /* Color oscuro para las etiquetas */
+}
+
+input {
+  padding: 12px; /* Espaciado interno en los campos de entrada */
+  border: 1px solid #007bff; /* Borde azul alrededor del campo */
+  border-radius: 4px; /* Bordes redondeados en los campos de entrada */
+  font-size: 16px; /* Tamaño de fuente del texto en el campo */
+  color: #333; /* Color del texto en los campos de entrada */
+  transition: border-color 0.3s; /* Suavizar la transición del cambio de color del borde */
+}
+
+/* Efecto de foco en los campos de entrada */
+input:focus {
+  border-color: #0056b3; /* Cambia el color del borde a un azul más oscuro cuando el campo está enfocado */
+  outline: none; /* Eliminar el borde por defecto del navegador */
+}
+
+/* Caja de los alumnos registrados */
+.alumnos-list {
+  margin-top: 20px; /* Separación superior de la lista de alumnos */
+}
+
+.alumno-item {
+  border: 3px solid #007bff; /* Borde azul para cada alumno registrado */
+  border-radius: 4px; /* Bordes redondeados en la caja de cada alumno */
+  padding: 10px; /* Espaciado interior en la caja de cada alumno */
+  margin-bottom: 10px; /* Espaciado inferior entre alumnos */
+  background-color: #f8f9fa; /* Fondo claro para diferenciar la caja */
+}
+
+.alumno-buttons {
+  margin-top: 10px; /* Separación superior de los botones */
+}
+
+/* Estilo general para los botones */
+.alumno-buttons button {
+  margin-right: 10px; /* Separación entre los botones */
+  padding: 8px 12px; /* Padding para botones */
+  border: none; /* Quitar bordes */
+  border-radius: 25px; /* Bordes redondeados */
+  color: white; /* Color del texto en los botones */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Botón de agregar */
+.alumno-buttons button.add {
+  background-color: #007bff; /* Color azul para agregar */
+}
+
+.alumno-buttons button.add:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Botón de editar */
+.alumno-buttons button.edit {
+  background-color: #ffc107; /* Color amarillo para editar */
+}
+
+.alumno-buttons button.edit:hover {
+  background-color: #e0a800; /* Amarillo más oscuro al pasar el mouse */
+}
+
+/* Botón de eliminar */
+.alumno-buttons button.delete {
+  background-color: #dc3545; /* Color rojo para eliminar */
+}
+
+.alumno-buttons button.delete:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
