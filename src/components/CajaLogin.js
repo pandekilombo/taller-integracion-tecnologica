@@ -1,4 +1,4 @@
-import "./CajaLogin.css"
+import "./Caja.css"
 import React, {useState}from 'react'
 import logo from '../logo.svg';
 import {auth} from "./firebase"
@@ -13,8 +13,10 @@ export default (props) => {
   //para usar firebase en cada modulo lo llamamos
 
 
+  
 
-  const submit = async(e) =>{
+ 
+  const Iniciar = async(e) =>{
 
     e.preventDefault();
     try {
@@ -30,14 +32,16 @@ export default (props) => {
   
   return (
 <div class="login">
-	<h1>Login</h1>
+	<h1>Iniciar Sesión</h1>
   
   <img src={logo} className="App-logo" alt="logo" />
     
     	<input type="email" name="u" placeholder="Correo" required="required" onChange={(ev) => setEmail(ev.target.value)} />
         <input type="password" name="p" placeholder="Contraseña" required="required" onChange={(ev) => setPassword(ev.target.value)} />
-        <button onClick={submit} class="btn btn-primary btn-block btn-large">Registrar</button>
-    
+        <button onClick={Iniciar} class="btn btn-primary btn-block btn-large">Iniciar sesión</button>
+        <p></p>
+      
+        
 </div>
   )
 }

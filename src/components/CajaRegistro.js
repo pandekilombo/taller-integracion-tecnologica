@@ -1,4 +1,4 @@
-import "./CajaLogin.css"
+import "./Caja.css"
 import React, {useState}from 'react'
 import logo from '../logo.svg';
 import {auth} from "./firebase"
@@ -40,6 +40,8 @@ export default (props) => {
     	<input type="email" name="u" placeholder="Correo" required="required" onChange={(ev) => setEmail(ev.target.value)} />
       <input type="password" name="p" placeholder="Contraseña" required="required" onChange={(ev) => setPassword(ev.target.value)} />
       <button onClick={submit} class="btn btn-primary btn-block btn-large">Registrar</button>
+      <p></p>
+
     
 </div>
   )

@@ -88,6 +88,7 @@ body {
   margin-bottom: 20px; /* Espaciado debajo de la imagen */
 }
 
+
 input {
   width: 100%;
   margin-bottom: 10px;
@@ -116,7 +117,7 @@ input:focus {
   color: #333;
   text-align: center;
   background-color: #f5f5f5;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #9996da;
   border-radius: 4px;
   cursor: pointer;
   width: 100%; /* Botón de ancho completo */
@@ -128,5 +129,44 @@ input:focus {
 }
 
 .btn:hover {
-  background-color: #e6e6e6;
+  background-color: #1829be;
+}
+
+/* Desde aqui es creado por nosotros y no inspirado */
+.boton-registro { /* Para botones en el div bajo el boton de login*/
+  display: inline-block;
+  padding: 4px 10px; /*Espaciado entre texto y bordes*/
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 11px; /*Tamaño vertical*/
+  color: #fff;
+  text-align: center;
+  background-color: #0a3998;
+  border: 1px solid #9996da; /*bordes blancos*/
+  border-radius: 4px; /* Bordes redondos */
+  cursor: pointer; /*Cambiar a manito al poner puntero encima*/ 
+  width: 100%; /* Botón de ancho completo */
+
+
+}
+
+.boton-registro:hover {
+  background-color: #6e79dc;
+}
+
+.clickable {
+  color: rgb(38, 38, 96);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.espaciado {
+  margin-bottom: 20px; /* Espacio debajo de cada línea */
+}
+
+.ContenedorBotonesInicio{
+  display: flex; /* Activar Flexbox */
+  gap: 10px; /* Espacio entre botones */
+  justify-content: center; /* Centrar horizontalmente */
 }

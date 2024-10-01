@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+.ContenedorBotonesInicio{
+  display: flex; /* Activar Flexbox */
+  gap: 10px; /* Espacio entre botones */
+  justify-content: center; /* Centrar horizontalmente */
+}
