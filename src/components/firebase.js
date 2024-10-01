@@ -3,6 +3,7 @@ import { getAuth } from "firebase/auth";
 
 
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyD_2zX9bjuuOCr1f3U_mAzEi3l6Gh66CH0",
     authDomain: "pagina-web-personal-trainer-24.firebaseapp.com",
