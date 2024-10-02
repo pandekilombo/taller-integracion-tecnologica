@@ -1,62 +1,52 @@
-//import logo from './logo.svg';
 import './App.css';
-//import { PrimerComponente } from './components/PrimerComponente';
-//import { SegundoComponente } from './components/SegundoComponente';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import CajaLogin from './components/CajaLogin';
 import CajaRegistro from './components/CajaRegistro';
 import Home from './components/Home';
-
-// import Estudiantes from './components/Estudiantes';
-// import Horarios from './components/Horarios';
-// import Clases from './components/Clases';
-
-//import CajaLogin from './components/CajaLogin';
-import React, {useState}from 'react'
-
+import Estudiantes from './components/Estudiantes';
+import Horarios from './components/Horarios';
+import Clases from './components/Clases';
+import { auth } from './components/firebase'; // Asegúrate de tener la autenticación correctamente importada
 
 function App() {
+  const [user, setUser] = useState(null); // Estado para manejar el usuario autenticado
 
-    // Estado para controlar qué componente mostrar
-    const [currentView, setCurrentView] = useState('login');
+  // useEffect para escuchar el estado de autenticación de Firebase
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user); // Si el usuario está autenticado, guardamos el usuario
+      } else {
+        setUser(null); // Si no está autenticado, el usuario es null
+      }
+    });
 
-  const handleRegisterClick = () => {
-    setCurrentView('registro'); // Cambia a CajaRegistro
-  };
-
-  const handleRecoverClick = () => {
-    setCurrentView('recuperacion'); // Cambia a CajaRecuperacion
-  };
-
-  const handleLoginClick = () => {
-    setCurrentView('login'); // Regresa a CajaLogin
-  };
-//{currentView === 'recuperacion' && <CajaRecuperacion />}    
-//<button onClick={handleRecoverClick} className="boton-registro">Recuperar</button>  
-
+    return () => unsubscribe(); // Limpia la suscripción cuando se desmonta el componente
+  }, []);
 
   return (
-    <div className="App">
-      {currentView === 'login' && <CajaLogin />}
-      {currentView === 'registro' && <CajaRegistro />}
-      
-      
-        
+    <Router>
+      <div className="App">
+        {/* Define las rutas */}
+        <Routes>
+          <Route path="/" element={<CajaLogin />} />
+          <Route path="/registro" element={<CajaRegistro />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/estudiantes" element={<Estudiantes />} />
+          <Route path="/horarios" element={<Horarios />} />
+          <Route path="/clases" element={<Clases />} />
+        </Routes>
 
-
-      <p></p>
-      
-      <div class="ContenedorBotonesInicio login">
-        
-        
-        <button onClick={handleLoginClick} className="boton-registro">Iniciar Sesión</button>
-        <button onClick={handleRegisterClick} className="boton-registro">Registrar</button>
-
-        
-      </div>          
-       
-      
-
-    </div>
+        {/* Muestra los botones de inicio de sesión y registro solo si el usuario no está autenticado */}
+        {!user && (
+          <div className="ContenedorBotonesInicio">
+            <Link to="/" className="boton-registro">Iniciar Sesión</Link>
+            <Link to="/registro" className="boton-registro">Registrar</Link>
+          </div>
+        )}
+      </div>
+    </Router>
   );
 }
 

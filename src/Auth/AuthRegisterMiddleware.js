@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword} from "firebase/auth";
 
-import swal from "sweetalert"
+import swal from "sweetalert2"
 
 
 const userRegisterAuth = async (auth, email, password) =>{
