@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword} from "firebase/auth";
 
-import swal from "sweetalert"
+import swal from "sweetalert2"
 
 
 const userLoginAuth = async (auth, email, password) => {
