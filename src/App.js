@@ -4,6 +4,12 @@ import './App.css';
 //import { SegundoComponente } from './components/SegundoComponente';
 import CajaLogin from './components/CajaLogin';
 import CajaRegistro from './components/CajaRegistro';
+import Home from './components/Home';
+
+// import Estudiantes from './components/Estudiantes';
+// import Horarios from './components/Horarios';
+// import Clases from './components/Clases';
+
 //import CajaLogin from './components/CajaLogin';
 import React, {useState}from 'react'
 
