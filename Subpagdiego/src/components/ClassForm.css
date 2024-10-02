@@ -1,0 +1,32 @@
+/* src/components/ClassForm.css */
+.form-container {
+    display: flex;
+    flex-direction: column; /* Alinear en columna */
+    align-items: center; /* Centrar horizontalmente */
+    width: 100%; /* O ajusta a un ancho específico como 400px */
+    margin: 0 auto; /* Centrar el formulario */
+  }
+  
+  .input-field {
+    width: 300px; /* Ajusta el tamaño que desees */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  }
+  
+  .submit-button {
+    width: 300px; /* Igualar el tamaño del botón */
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #218838;
+  }
+  

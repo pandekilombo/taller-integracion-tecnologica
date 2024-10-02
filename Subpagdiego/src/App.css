@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  background-image: url('./fondogym.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px;
+}
+/* src/App.css */
+
+.app-container {
+  display: flex; /* Usar flexbox para alinear los elementos */
+  justify-content: space-between; /* Espacio entre el formulario y la lista */
+  padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+.form-container {
+  width: 40%; /* Ajustar el ancho del formulario */
+  margin-right: 20px; /* Espacio entre el formulario y la lista */
+}
+
+.list-container {
+  width: 55%; /* Ajustar el ancho de la lista */
+}
+
+/* Opcional: Estilos adicionales para el título y elementos de la lista */
+h1 {
+  text-align: left; /* Alinear el título a la izquierda */
+}
+
+.list-container ul {
+  list-style-type: none; /* Elimina el estilo de lista */
+  padding: 0; /* Elimina el padding */
+}
+
+.list-container li {
+  margin-bottom: 10px; /* Espacio entre las clases */
+  border: 1px solid #ccc; /* Añade un borde */
+  padding: 10px; /* Espacio dentro de cada clase */
+}
