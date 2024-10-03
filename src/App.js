@@ -4,6 +4,7 @@ import './App.css';
 //import { SegundoComponente } from './components/SegundoComponente';
 import CajaLogin from './components/CajaLogin';
 import CajaRegistro from './components/CajaRegistro';
+import CajaRecuperacion from './components/CajaRecuperacion';
 import Home from './components/Home';
 
 // import Estudiantes from './components/Estudiantes';
@@ -30,7 +31,8 @@ function App() {
   const handleLoginClick = () => {
     setCurrentView('login'); // Regresa a CajaLogin
   };
-//{currentView === 'recuperacion' && <CajaRecuperacion />}    
+
+     
 //<button onClick={handleRecoverClick} className="boton-registro">Recuperar</button>  
 
 
@@ -38,7 +40,7 @@ function App() {
     <div className="App">
       {currentView === 'login' && <CajaLogin />}
       {currentView === 'registro' && <CajaRegistro />}
-      
+      {currentView === 'recuperacion' && <CajaRecuperacion />} 
       
         
 
@@ -49,7 +51,8 @@ function App() {
         
         
         <button onClick={handleLoginClick} className="boton-registro">Iniciar Sesión</button>
-        <button onClick={handleRegisterClick} className="boton-registro">Registrar</button>
+        <button onClick={handleRegisterClick} className="boton-registro">Registrarse</button>
+        <button onClick={handleRecoverClick} className="boton-registro">Recuperar contraseña</button>  
 
         
       </div>          

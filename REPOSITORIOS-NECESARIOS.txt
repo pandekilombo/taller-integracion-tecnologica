@@ -2,4 +2,5 @@ FIREBASE
 NPM ACTUALIZADO
 NODE JS ACTUALIZADO (descargar manualmente)
 SWEETALERT
-
+react-calendar
+react-router-dom

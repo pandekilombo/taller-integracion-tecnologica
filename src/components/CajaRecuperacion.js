@@ -2,44 +2,45 @@ import "./Caja.css"
 import React, {useState}from 'react'
 import logo from '../logo.svg';
 import {auth} from "./firebase"
-import userRegisterAuth from "../Auth/AuthRegisterMiddleware"
+import AuthPasswordRecovery from "../Auth/AuthPasswordRecovery"
 
 console.log("loading")
 
 
 export default (props) => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+
   
   //para usar firebase en cada modulo lo llamamos
 
 
 
-  const submit = async(e) =>{
+  const Recuperar = async(e) =>{
 
     e.preventDefault();
     try {
       //con await hacemos esperamos a que se cumpla la linea de codigo
       
-      await userRegisterAuth(auth,email,password)
+      await AuthPasswordRecovery(auth,email)
       
   
       
     } catch (error) {
       console.log(error)     
-      alert("Error al registrar en la pagina") 
+      alert("Error al enviar correo de recuperación") 
     }
   } 
   
   return (
 <div class="login">
-	<h1>Registrar Cuenta</h1>
+	<h1>Recuperar Contraseña</h1>
   
   <img src={logo} className="App-logo" alt="logo" />
-    
+      <h3 className="textoplano">Se enviará a su correo una confirmación para cambiar su contraseña</h3>
+
+
     	<input type="email" name="u" placeholder="Correo" required="required" onChange={(ev) => setEmail(ev.target.value)} />
-      <input type="password" name="p" placeholder="Contraseña" required="required" onChange={(ev) => setPassword(ev.target.value)} />
-      <button onClick={submit} class="btn btn-primary btn-block btn-large">Registrar</button>
+      <button onClick={Recuperar} class="btn btn-primary btn-block btn-large">Recuperar contraseña</button>
       <p></p>
 
     

@@ -170,3 +170,11 @@ input:focus {
   gap: 10px; /* Espacio entre botones */
   justify-content: center; /* Centrar horizontalmente */
 }
+
+
+.textoplano{
+
+  color: white;
+  /*text-decoration: underline; /* Subrayado*/
+
+}
