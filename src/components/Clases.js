@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Clases = () => {
+
+  
   return (
     <div className="page">
       <h1>Clases</h1>
