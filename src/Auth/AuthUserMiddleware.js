@@ -10,11 +10,11 @@ const userLoginAuth = async (auth, email, password) => {
         const user=auth.currentUser;
         //console.log(user);
         
-        console.log("Logeado con exito")     
-        alert("Logeado con éxito")
+        console.log("Logeado con exito");
+        alert("Logeado con éxito");
     } catch (error) {
 
-        alert("Datos ingresados invalidos")
+        alert("Datos ingresados invalidos");
     }
 
 

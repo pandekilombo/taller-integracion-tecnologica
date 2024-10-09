@@ -1,0 +1,16 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('./fondogym.jpg'); /* Asegúrate de que la ruta sea correcta */
+  background-size: cover; /* Esto hará que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  height: 100vh; /* Asegúrate de que el fondo cubra toda la altura de la ventana */
+  color: white; /* Cambiar el color del texto a blanco */
+}
+
+.container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar la legibilidad del texto */
+}
